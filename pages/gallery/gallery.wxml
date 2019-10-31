@@ -1,0 +1,30 @@
+<view class="container container-fill">
+    <view class='music {{on? "on": ""}}'>
+        <image src='../../resources/images/music.png' style='width: 60rpx;height: 60rpx;' bindtap='stop'></image>
+    </view>
+	<view class="scroll-fullpage" 
+    bindtouchstart="scrollTouchstart" 
+    bindtouchmove="scrollTouchmove" 
+    bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
+		<view class="section section01 {{scrollindex==0?'active':''}}" style="background: #3399FF;background-image:url('../../resources/images/01.jpg');">
+			<text class="section-maintitle">页面一标题</text>
+			<text class="section-subtitle">我的页面描述1</text>
+		</view>
+		<view class="section section02 {{scrollindex==1?'active':''}}" style="background: #00CC66;background-image:url('../../resources/images/02.jpg');">
+			<text class="section-maintitle">页面二标题</text>
+			<text class="section-subtitle">我的页面描述2</text>
+		</view>
+		<view class="section section03 {{scrollindex==2?'active':''}}" style="background: #33CCCC;background-image:url('../../resources/images/01.jpg');">
+			<text class="section-maintitle">页面三标题</text>
+			<text class="section-subtitle">我的页面描述3</text>
+		</view>
+		<view class="section section04 {{scrollindex==3?'active':''}}" style="background: #6699FF;">
+			<text class="section-maintitle">页面四标题</text>
+			<text class="section-subtitle">我的页面描述4</text>
+		</view>
+		<view class="section section05 {{scrollindex==4?'active':''}}" style="background: #9966FF;">
+			<text class="section-maintitle">页面五标题</text>
+			<text class="section-subtitle">我的页面描述5</text>
+		</view>
+	</view>
+</view>
